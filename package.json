@@ -8,9 +8,21 @@
     "dev": "nodemon src/server.js",
     "test": "jest --coverage",
     "test:watch": "jest --watch",
-    "lint": "eslint src/ tests/"
+    "lint": "eslint src/ tests/",
+    "setup": "npm install && echo '\nSetup complete! Run \"npm run dev\" to start the development server.'",
+    "docker:build": "docker build -t goodman-taylor-app2 .",
+    "docker:run": "docker run -p 3000:3000 goodman-taylor-app2",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down"
   },
-  "keywords": [],
+  "keywords": [
+    "business",
+    "application",
+    "express",
+    "nodejs",
+    "rest-api",
+    "web-app"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
