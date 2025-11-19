@@ -1,0 +1,48 @@
+{
+  "name": "goodman-taylor-app2",
+  "version": "1.0.0",
+  "description": "Software application for multiple business purposes - second version",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
+    "lint": "eslint src/ tests/",
+    "setup": "npm install && echo '\nSetup complete! Run \"npm run dev\" to start the development server.'",
+    "docker:build": "docker build -t goodman-taylor-app2 .",
+    "docker:run": "docker run -p 3000:3000 goodman-taylor-app2",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down"
+  },
+  "keywords": [
+    "business",
+    "application",
+    "express",
+    "nodejs",
+    "rest-api",
+    "web-app"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.2.1",
+    "helmet": "^8.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.39.1",
+    "jest": "^30.2.0",
+    "nodemon": "^3.1.11",
+    "supertest": "^7.1.4"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coverageDirectory": "coverage",
+    "testMatch": [
+      "**/tests/**/*.test.js"
+    ]
+  }
+}
